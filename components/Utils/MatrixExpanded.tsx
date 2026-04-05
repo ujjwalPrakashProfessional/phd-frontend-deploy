@@ -28,7 +28,7 @@ function MatrixExpanded({ data }: { data: string }) {
               </TableCell>
               <TableCell>
                 <Table sx={{ minWidth: 650 }} aria-label="keywords table">
-                  {Object.keys(func[branch as keyof typeof func]).map(
+                  {Object.keys(func[branch as keyof typeof func] || {}).map(
                     (keyword) => {
                       const temp = func[branch as keyof typeof func];
                       const value =
